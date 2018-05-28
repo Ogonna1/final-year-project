@@ -1,0 +1,153 @@
+/*Style of entire tableView */
+.table-view{
+    /*-fx-background-color: transparent;*/
+ }
+
+ /*Style of entire tableView when is getting focused*/
+.table-view:focused{
+    /*-fx-background-color: transparent;*/
+}
+
+
+
+/*Style of each column header in the tableView*/
+.table-view .column-header {
+     -fx-background-color: #00a3ff;
+} 
+
+/*Style of each column header's background in the tableView*/
+/*.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0.0%, #424141 100.0%);
+}
+
+ /*Style of each column header's label  in the tableView*/
+.table-view .column-header-background .label{
+     -fx-background-color: transparent; 
+    /*-fx-font-weight:bold;*/
+    -fx-text-fill: white;
+    -fx-font-size:14px;
+    -fx-padding: 1.0em; 
+}
+
+/*Style of each column in the tableView*/
+.table-view .table-column{
+    /*-fx-alignment:center;*/
+    -fx-cell-size: 15px;
+    -fx-padding: 8px;
+}
+
+ /*Style of each table cell*/
+.table-view .table-cell{
+    /*-fx-font-weight:bold;*/
+    -fx-font-size:14px;           /*the font size you asked in the comments below*/
+    /* -fx-text-fill:orange; */
+
+}
+
+
+/*Style for each < non odd> row of table view*/
+/*.table-row-cell{
+    /*-fx-background-color: white;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.8em; 
+}
+*/
+/*Style for each <odd> row of table view
+.table-row-cell:odd{
+    -fx-background-color: #78c2ea;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;  
+}*/
+
+
+/*Style of each entire row in the table view*/
+
+.table-row-cell:selected {
+   /* -fx-border-color:transparent firebrick transparent firebrick  ;
+    -fx-border-width:2.0; */
+}
+
+
+/*Style of each entire row in the table view when is hovered
+.table-row-cell:hover {
+    -fx-background-color:orange;
+}*/
+
+
+/*Style of each entire row in the table view when is getting focused
+.table-row-cell:focused {
+    -fx-background-color:purple;
+}
+*/
+
+.table-view .filler{
+    -fx-background-color: #00a3ff;
+}
+
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
+
+/*.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
+*/

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="418.0" maxWidth="800.0" prefHeight="418.0" prefWidth="800.0" stylesheets="@../../styles/table_style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="features.sample_data.SampleData">
+   <children>
+      <TableView fx:id="entryTableView" layoutX="16.0" layoutY="54.0" prefHeight="362.0" prefWidth="784.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+        <columns>
+            <TableColumn fx:id="serialColumn" prefWidth="56.333335876464844" text="s/n" />
+          <TableColumn fx:id="weightColumn" prefWidth="101.0" text="Weight" />
+          <TableColumn fx:id="dailyGainColumn" minWidth="0.0" prefWidth="122.33334350585938" text="Daily Gain" />
+            <TableColumn fx:id="feedConsumptionColumn" minWidth="2.0" prefWidth="164.0" text="Feed Con. Per Day" />
+            <TableColumn fx:id="waterConsumptionColum" minWidth="0.0" prefWidth="161.33331298828125" text="Water Con. Per Day" />
+            <TableColumn fx:id="ageColumn" prefWidth="162.66668701171875" text="Age of Pig (weeks)" />
+        </columns>
+      </TableView>
+      <GridPane fx:id="newEntryGridPane" hgap="10.0" layoutX="166.0" layoutY="116.0" style="-fx-background-color: #00a3ff;" vgap="25.0" visible="false" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXTextField fx:id="weightTextField" focusColor="#ff9500" labelFloat="true" promptText="weight" style="-fx-border-color: white; -fx-padding: 4;" unFocusColor="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="dailyGainTextField" focusColor="#ff9500" labelFloat="true" promptText="daily gain" style="-fx-border-color: white; -fx-padding: 4;" unFocusColor="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="feedTextField" focusColor="#ff9500" labelFloat="true" promptText="feed" style="-fx-border-color: white; -fx-padding: 4;" unFocusColor="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="waterTextField" focusColor="#ff9500" labelFloat="true" promptText="water" style="-fx-border-color: white; -fx-padding: 4;" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="ageTextField" focusColor="#ff9500" labelFloat="true" promptText="age" style="-fx-border-color: white; -fx-padding: 4;" unFocusColor="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" onAction="#addNewEntryToDatabase" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #ff9500;" text="ADD ENTRY" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#cancelNewEntry" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #ff9500;" text="CANCEL" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="24.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+      </GridPane>
+      <JFXButton layoutX="20.0" layoutY="348.0" onAction="#deleteSelectedEntry" ripplerFill="#ff9500" style="-fx-border-color: #ff9500;" text="DELETE ENTRY" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#ff9500" glyphName="TRASH_ALT" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="658.0" layoutY="350.0" onAction="#showNewEntryDialog" ripplerFill="#ff9500" style="-fx-background-color: #00a3ff;" text="NEW ENTRY" textFill="WHITE" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+         </graphic>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" color="#3c3a3a" height="26.93" radius="13.7075" spread="0.66" width="29.9" />
+   </effect>
+</AnchorPane>

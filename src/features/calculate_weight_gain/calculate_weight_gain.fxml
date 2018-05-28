@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="600.0" maxWidth="500.0" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="features.calculate_weight_gain.CalculateWeightGain">
+   <children>
+      <VBox layoutX="235.0" layoutY="46.0" prefHeight="200.0" prefWidth="372.0" spacing="25.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <HBox spacing="20.0">
+               <children>
+                  <VBox prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXTextField fx:id="ageOfPig" focusColor="DARKORANGE" labelFloat="true" promptText="AGE OF PIG" style="-fx-font-size: 15;" unFocusColor="#00a3ff" />
+                     </children>
+                  </VBox>
+                  <VBox prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXComboBox fx:id="healthLevel" focusColor="DARKORANGE" labelFloat="true" prefWidth="200.0" promptText="HEALTH LEVEL" style="-fx-font-size: 15;" unFocusColor="#00a3ff" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="numberOfDaysTextField" focusColor="DARKORANGE" labelFloat="true" promptText="NUMBER OF DAYS" style="-fx-font-size: 15;" unFocusColor="#00a3ff" />
+            <JFXTextField fx:id="qtyOfCarbohydrate" focusColor="DARKORANGE" labelFloat="true" promptText="QUANTITY OF CARBOHYDRATE" style="-fx-font-size: 15;" unFocusColor="#00a3ff" />
+            <JFXTextField fx:id="qtyOfProtein" focusColor="DARKORANGE" labelFloat="true" promptText="QUANTITY OF PROTEIN" style="-fx-font-size: 15;" unFocusColor="#00a3ff" />
+            <JFXTextField fx:id="qtyOfFat" focusColor="DARKORANGE" labelFloat="true" promptText="QUANTITY OF FAT AND OIL" style="-fx-font-size: 15;" unFocusColor="#00a3ff" />
+            <JFXTextField fx:id="qtyOfMinerals" focusColor="DARKORANGE" labelFloat="true" promptText="QUANTITY OF MINERALS AND VITAMIN" style="-fx-font-size: 15;" unFocusColor="#00a3ff" />
+            <JFXTextField fx:id="qtyOfWater" focusColor="DARKORANGE" labelFloat="true" promptText="QUANTITY OF WATER" style="-fx-font-size: 15;" unFocusColor="#00a3ff" />
+            <JFXButton buttonType="RAISED" onAction="#calculateWeightGain" prefHeight="25.0" prefWidth="372.0" style="-fx-background-color: #00a3ff;" text="CALCULATE WEIGHT GAIN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <Text fx:id="weightGainTextView" strokeType="OUTSIDE" strokeWidth="0.0" text="The weight gain for x days is x">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <JFXButton layoutX="274.0" layoutY="459.0" onAction="#cancel" prefWidth="100.0" style="-fx-background-color: #00a3ff;" text="CANCEL" textFill="WHITE" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="16.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="384.0" layoutY="459.0" onAction="#save" prefWidth="100.0" style="-fx-background-color: #00a3ff;" text="SAVE" textFill="WHITE" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="16.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
